@@ -1,1 +1,111 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.presentation-container {
+    background-color: #2a2a40;
+    width: 80%;
+    max-width: 800px;
+    height: 60vh;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.slide {
+    display: none; /* Nakatago ang slide kapag hindi active */
+    animation: fadeIn 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide.active {
+    display: flex; /* Ipinapakita lang ang active slide */
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #4facfe;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #00f2fe;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4facfe;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+ul {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.instruction {
+    margin-top: 20px;
+    font-style: italic;
+    color: #a0a0b0;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+button {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
